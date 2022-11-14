@@ -1,0 +1,33 @@
+import React from 'react'
+
+import Box from '@mui/material/Box';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import Masonry from '@mui/lab/Masonry';
+
+const heights = [400, 500, 400, 500 , 400, 500, 400, 500];
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(0.5),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
+
+const MansoryGrid = () => {
+  return (
+    <Box 
+    sx={{ width: 750, minHeight: 300, overflowY: 'hidden' }}>
+      <Masonry columns={2} spacing={8}>
+        {heights.map((height, index) => (
+          <Item key={index} sx={{ height }}>
+            {index + 1}
+          </Item>
+      ))}
+    </Masonry>
+  </Box>
+  )
+}
+
+export default MansoryGrid;
