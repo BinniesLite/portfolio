@@ -1,0 +1,65 @@
+@keyframes upper {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+}
+
+.box { 
+  transition: all 1.5s ease;
+  overflow: hidden;
+  height: 4rem;
+  
+}
+
+.heading_1 {
+  animation: upper;
+  animation-duration: 0.5s;
+  margin: 0;
+  padding: 0;
+}
+
+.heading_2 {
+  transform: translateY(100%);
+  animation: upper 0.5s 1s forwards;
+  margin: 0;
+  padding: 0;
+}
+ 
+.heading_3 {
+  transform: translateY(100%);
+  animation: upper;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes introduction {
+    0% {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: 0; 
+    }
+    50% {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: 0; 
+    }
+    100% {
+        width: 80vw;
+        
+    }
+}
+
+.intro {
+    animation: introduction 5s ease-in-out 0s;
+    
+}

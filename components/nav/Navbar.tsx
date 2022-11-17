@@ -1,7 +1,5 @@
 import React from 'react'
-
-
-import { navLinks } from '../data/nav-links';
+import { navLinks } from '../../data/nav-links';
 
 import styled from '@emotion/styled';
 
@@ -12,6 +10,7 @@ interface Props {
 const NavLinks = styled.div`${({activeMenu}: {activeMenu: boolean}) => 
     ` 
     display: flex;
+    align-items: flex-start; 
     gap: clamp(1rem, 1.4rem, 1.7rem);
     color: white;
     font-style: capitalize;
@@ -20,7 +19,9 @@ const NavLinks = styled.div`${({activeMenu}: {activeMenu: boolean}) =>
     padding: 5rem clamp(1rem, 2vw, 2rem); 
     
     transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
+    
     transform: ${activeMenu ? 'translateY(0) scale(1)' : 'translateY(120%) scale(0.9)'}; 
+   
     overflow-x: sticky;
 
     img {
@@ -47,7 +48,6 @@ const Wrapper = styled.div`${({activeMenu}:{activeMenu: boolean}) =>
     
     z-index: 2;
     overflow: hidden;
-
 `
 }
   

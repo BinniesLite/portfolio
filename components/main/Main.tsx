@@ -4,11 +4,9 @@ import styled from '@emotion/styled';
 import Introduction from './Introduction';
 import MansoryGrid from './MansoryGrid';
 
+import classes from './Main.module.css';
 const Wrapper = styled.div`
   ${({activeMenu}: {activeMenu: boolean}) => `  
-    background
-    background-position:  center 0%;
-    background-size: cover;
     background-color: white; 
 
     width: 100vw;
@@ -23,8 +21,9 @@ const Wrapper = styled.div`
     
     display: flex;
     
+    overflow: hidden;
 
-    transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
+    transition: transform 400ms cubic-bezier(.13,.53,.38,.97);
     transform: ${activeMenu && 'translateY(-50%)'}
   
   `}
@@ -38,19 +37,16 @@ interface Props {
 const Main = ({activeMenu}: Props) => {
   
   return (
-    <Wrapper activeMenu={activeMenu} >
-      <div className='flex flex-row gap-4'>
+    <Wrapper style={{width: '100%'}} activeMenu={activeMenu} >
+      <div className='flex flex-row gap-3 w-full'>
         <div
+        className="w-full mr-[-50px] pr-[50px]"
         style={{ maxHeight: 'calc(100vh - 1rem)',
           overflowY: 'scroll', overflowX: 'hidden'}}
         >
           <MansoryGrid />
         </div>
-        <div
-         style={{overflow: 'hidden'}}
-         className='overflow-hidden'>
           <Introduction />
-        </div>
       </div>
     </Wrapper>
   )

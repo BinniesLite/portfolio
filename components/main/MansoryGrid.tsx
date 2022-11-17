@@ -5,6 +5,8 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
 
+import classes from './MansoryGrid.module.css';
+
 const heights = [400, 500, 400, 500 , 400, 500, 400, 500];
 
 const Item = styled(Paper)(({ theme }) => ({

@@ -1,8 +1,8 @@
-import Navbar from '../components/Navbar'
-import Main from '../components/Main'
-import NavButton from '../components/NavButton'
+import Navbar from '../components/nav/Navbar'
+import Main from '../components/main/Main'
+import NavButton from '../components/nav/NavButton'
 import { useMenu } from '../context/state-context'
-import MansoryGrid from '../components/MansoryGrid'
+import MansoryGrid from '../components/main/MansoryGrid'
 
 export default function Home() {
   const {activeMenu, setActiveMenu} = useMenu(); 
